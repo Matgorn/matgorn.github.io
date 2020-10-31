@@ -1,0 +1,139 @@
+#about-us-2 {
+  margin-top: 5em;
+  min-width: 300px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  h2 {
+    flex: 100%;
+    text-align: center;
+  }
+}
+
+.members-grid-el {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3em 0;
+  max-width: 400px;
+  transform: translateX(-100vw);
+  .image-wrapper {
+    position: relative;
+    clip-path: circle(45%);
+    margin: 1em 0;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      transition: 1s transform;
+    }
+    img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
+}
+
+.animate-member-1{
+  animation: .3s slide-in-1 forwards;
+}
+
+.animate-member-2 {
+  animation: .6s slide-in-2 forwards;
+}
+
+.animate-member-3 {
+  animation: .9s slide-in-3 forwards;
+}
+
+.animate-member-4 {
+  animation: 1.2s slide-in-4 forwards;
+}
+
+@keyframes slide-in-1 {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-2 {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-3 {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-4 {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media(max-width: 1025px) {
+  .members-grid-el {
+    flex-basis: 40%;
+  }
+}
+
+@media(max-width: 500px) {
+  .members-grid-el {
+    flex-basis: 100%;
+    transform: translateX(0);
+  }
+  
+
+  .animate-member-1{
+    text-align: center;
+    animation: 0s slide-in-4;
+  }
+  
+  .animate-member-2 {
+    text-align: center;
+    animation: 0s slide-in-4;
+  }
+  
+  .animate-member-3 {
+    text-align: center;
+    animation: 0s slide-in-4;
+  }
+  
+  .animate-member-4 {
+    text-align: center;
+    animation: 0s slide-in-4;
+  }
+}
+
